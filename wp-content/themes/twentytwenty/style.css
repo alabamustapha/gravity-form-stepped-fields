@@ -6469,3 +6469,107 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+
+
+/* POPUP FORM STYLE */
+
+
+.form-popup{
+	display: none;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	background-color: rgba(0,0,0,.7);
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 6rem;
+	backdrop-filter: blur(5px);
+}
+
+.form-popup.show{
+	display: block;
+}
+
+.form-close-btn{
+	position: fixed;
+	bottom: 5rem;
+	left: 6rem;
+	color: rgba(255,255,255, .5);
+	font-weight: 600;
+	font-size: 24px;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.form-close-btn:hover{
+	color: #fff;
+}
+
+
+/* FORM HEADING */
+
+.gform_wrapper .gform_heading{
+	margin-bottom: 8rem !important;
+}
+
+body .gform_wrapper .gform_heading .gform_title {
+	color: #fff;
+	font-size: 1.5em;
+}
+
+/* HIDE DEFAULT PROGRESS BAR */
+
+.gform_wrapper .gf_progressbar_wrapper{
+	display: none;
+}
+
+/* FORM-FOOTER */
+
+body .gform_wrapper .gform_page_footer {
+	position: fixed;
+    bottom: 5rem;
+    right: 6rem;
+    display: inline-block;
+	width: auto;
+	border-top: 0;
+}
+
+/* NEXT AND CONTINUE BUTTONS */
+
+body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
+	padding: 0.6em 1.5em;
+    border: 3px solid #232529;
+    border-radius: 40px;
+    font-weight: 700;
+	color: rgba(0,0,0,0.4);
+	background-color: transparent;
+	text-transform: capitalize;
+}
+body .gform_wrapper .gform_body .gform_page_footer .gform_next_button:hover,
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button:hover {
+	color: #fff;
+	background-color: #232529;
+	text-decoration: none;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gsection{
+	display: none;
+}
+
+/* FORM BODY */
+body .gform_wrapper .gform_body{
+	width: 70%;
+	margin: 0 auto;
+}
+
+/* Label */
+body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+	color: #fff;
+	font-size: 40px;
+	margin-bottom: 3rem;
+	font-weight: 700;
+}
+
+
