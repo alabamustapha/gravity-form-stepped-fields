@@ -815,3 +815,46 @@ function twentytwentyFindParents( target, query ) {
 
 	return parents;
 }
+
+
+/**
+ * CUSTOM FORM POPUP JS
+ */
+
+ let formPopupBtn = document.querySelector('.form-popup-btn');
+ const  popup = document.querySelector('.form-popup');
+
+// FORM POPUP BUTTON TO OPEN THE FORM
+
+popup.classList.add('show');
+
+ formPopupBtn.addEventListener('click', function(e){
+	 e.preventDefault();
+	popup.classList.add('show');
+ });
+
+
+//  APPENDING A CLOSE BUTTON ELEMENT TO THE FORM POPUP
+
+let formCloseBtn = document.createElement('span');
+
+formCloseBtn.classList.add('form-close-btn');
+formCloseBtn.textContent = 'Close form';
+
+popup.appendChild(formCloseBtn);
+
+
+// CLOSE FORM POPUP 
+
+ formCloseBtn.addEventListener('click',  function(e){
+	 popup.classList.remove('show');
+	
+ });
+
+//  CLOSING POPUP WHEN YOU CLICK THE OVERLAY
+
+//  document.addEventListener('click',  function(e){
+// 	 if(e.target.classList.contains('form-popup')){
+// 		 popup.classList.remove('show');
+// 	 }
+//  })
