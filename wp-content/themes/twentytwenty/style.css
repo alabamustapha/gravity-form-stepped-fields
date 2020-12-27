@@ -6474,7 +6474,7 @@ a.to-the-top > * {
 /* POPUP FORM STYLE */
 
 
-.form-popup{
+.gform-popup{
 	display: none;
 	width: 100%;
 	height: 100vh;
@@ -6487,11 +6487,11 @@ a.to-the-top > * {
 	backdrop-filter: blur(5px);
 }
 
-.form-popup.show{
+.gform-popup.show{
 	display: block;
 }
 
-.form-close-btn{
+.gform-close-btn{
 	position: fixed;
 	bottom: 5rem;
 	left: 6rem;
@@ -6502,12 +6502,12 @@ a.to-the-top > * {
 	transition: all .3s;
 }
 
-.form-close-btn:hover{
+.gform-close-btn:hover{
 	color: #fff;
 }
 
 
-/* FORM HEADING */
+/* GFORM HEADING */
 
 .gform_wrapper .gform_heading{
 	margin-bottom: 8rem !important;
@@ -6518,13 +6518,13 @@ body .gform_wrapper .gform_heading .gform_title {
 	font-size: 1.5em;
 }
 
-/* HIDE DEFAULT PROGRESS BAR */
+/* GHIDE DEFAULT PROGRESS BAR */
 
 .gform_wrapper .gf_progressbar_wrapper{
 	display: none;
 }
 
-/* FORM-FOOTER */
+/* GFORM-FOOTER */
 
 body .gform_wrapper .gform_page_footer {
 	position: fixed;
@@ -6535,7 +6535,7 @@ body .gform_wrapper .gform_page_footer {
 	border-top: 0;
 }
 
-/* NEXT AND CONTINUE BUTTONS */
+/* GNEXT AND CONTINUE BUTTONS */
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
@@ -6562,7 +6562,34 @@ body .gform_wrapper .gform_body .gform_fields .gsection{
 body .gform_wrapper .gform_body{
 	width: 70%;
 	margin: 0 auto;
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%); */
+	margin-top: 10rem;
 }
+
+/* VALIDATION ERROR */
+body .gform_wrapper .gform_body .gform_fields .gfield_error{
+	background-color: transparent;
+	border: 0;
+}
+body .gform_wrapper .validation_error{
+	border: 0 !important;
+	width: 70% !important;
+	margin: 0 auto;	
+	margin-bottom: 0 !important;
+	color: #eb7e7f !important;
+	font-weight: 700;
+	text-align: left !important;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
+	color: #eb7e7f !important;
+}
+
+
+
+/* INPUT FIELDS */
 
 /* Label */
 body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
@@ -6572,4 +6599,41 @@ body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label
 	font-weight: 700;
 }
 
+/* INPUT */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=text],
+body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid #232523;
+	border-radius: 0;
+	font-size: 48px !important;
+	font-weight: 700;
+	padding-bottom: 2rem !important;
+	color:  #ecdfc3;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+	border: none !important;
+	border-bottom: 3px solid #232523 !important;
+
+}
+
+/* INPUT FIELD PLACEHOLDER FOR BOTH ERROR AND NORMAL STATE */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=text]::placeholder,
+body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
+	font-size: 48px !important;
+	font-weight: 700;
+	color: rgba(35, 37, 35, .7);
+	/* padding-bottom: 3rem; */
+}
+
+
+/* STEPS COUNTER */
+.gform-step-counter{
+	position: absolute;
+	top: 6rem;
+	right: 6rem;
+	font-size: 36px;
+	font-weight: 700;
+	color: #232523;
+}
 

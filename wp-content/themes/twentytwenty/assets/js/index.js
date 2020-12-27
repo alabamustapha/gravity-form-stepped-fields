@@ -821,8 +821,8 @@ function twentytwentyFindParents( target, query ) {
  * CUSTOM FORM POPUP JS
  */
 
- let formPopupBtn = document.querySelector('.form-popup-btn');
- const  popup = document.querySelector('.form-popup');
+ let formPopupBtn = document.querySelector('.gform-popup-btn');
+ const  popup = document.querySelector('.gform-popup');
 
 // FORM POPUP BUTTON TO OPEN THE FORM
 
@@ -838,7 +838,7 @@ popup.classList.add('show');
 
 let formCloseBtn = document.createElement('span');
 
-formCloseBtn.classList.add('form-close-btn');
+formCloseBtn.classList.add('gform-close-btn');
 formCloseBtn.textContent = 'Close form';
 
 popup.appendChild(formCloseBtn);
@@ -851,10 +851,32 @@ popup.appendChild(formCloseBtn);
 	
  });
 
-//  CLOSING POPUP WHEN YOU CLICK THE OVERLAY
+// ADJUST FORM BODY MARGIN WHEN THERE IS ERROR
+let errorContainer = document.querySelector('.validation_error');
+let formBody = document.querySelector('.gform_wrapper .gform_body');
 
-//  document.addEventListener('click',  function(e){
-// 	 if(e.target.classList.contains('form-popup')){
-// 		 popup.classList.remove('show');
-// 	 }
-//  })
+formBody.style.marginTop = (errorContainer !== null) ? '0' : '15rem';
+
+
+// CREATING STEPS AND APPENDING TO POPUP
+
+// get all form pages that are done
+let formPages = document.querySelectorAll('.gform_page');
+let formPageIndex = 1;
+let formPagesLength = formPages.length;
+
+formPages.forEach(function(el, index){
+	if(el.style.display !== 'none'){
+		formPageIndex = index + 1;
+	}
+})
+
+const stepsCounter = document.createElement('span');
+stepsCounter.classList.add('gform-step-counter');
+
+stepsCounter.textContent = `${formPageIndex}/${formPagesLength}`;
+popup.appendChild(stepsCounter);
+
+
+
+
