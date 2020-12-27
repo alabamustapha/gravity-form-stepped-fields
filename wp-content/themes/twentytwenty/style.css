@@ -6476,10 +6476,12 @@ a.to-the-top > * {
 
 .gform-popup{
 	display: none;
-	width: 100%;
+	width: 100% !important;
+	max-width: 100% !important;
 	height: 100vh;
 	position: fixed;
-	background-color: rgba(0,0,0,.7);
+	/* background-color: rgba(0,0,0,.7); */
+	background-color: #000;	
 	top: 0;
 	left: 0;
 	z-index: 1000;
@@ -6488,6 +6490,7 @@ a.to-the-top > * {
 }
 
 .gform-popup.show{
+	background-color: rgba(0,0,0,.7) !important;
 	display: block;
 }
 
@@ -6635,5 +6638,30 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
 	font-size: 36px;
 	font-weight: 700;
 	color: #232523;
+}
+
+.gform-step-dots-wrapper{
+	display: grid;
+	grid-auto-flow: row;
+	gap: 1.5rem;
+	position: absolute;
+	top: 50%;
+	right: 6rem;
+	transform: translateY(-50%);
+}
+.gform-step-dot{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: rgba(35, 37, 35,.3);
+	cursor: pointer;
+	transition: all .3s;
+}
+.gform-step-dot.active,
+.gform-step-dot:hover{
+	background-color: #ecdfc3 !important;
+}
+.gform-step-dot.dirty{
+	background-color: #232523;
 }
 
