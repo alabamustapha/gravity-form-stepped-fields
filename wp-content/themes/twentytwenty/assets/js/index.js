@@ -822,8 +822,9 @@ function twentytwentyFindParents( target, query ) {
  */
 window.addEventListener('load', function(){
 
-	let formPopupBtn = document.querySelector('.gform-popup-btn');
+	const formPopupBtn = document.querySelector('.gform-popup-btn');
 	const  popup = document.querySelector('.gform-popup');
+
 	
 	// FORM POPUP BUTTON TO OPEN THE FORM
 	
@@ -852,10 +853,12 @@ window.addEventListener('load', function(){
 		popup.classList.remove('show');
 	
 	});
+
 	
 	// ADJUST FORM BODY MARGIN WHEN THERE IS ERROR
 	let errorContainer = document.querySelector('.validation_error');
-	let formBody = document.querySelector('.gform_wrapper .gform_body');
+	let formBody = document.querySelector('body .gform_wrapper .gform_body');
+	formBody.style.height = '40vh';
 	
 	formBody.style.marginTop = (errorContainer !== null) ? '0' : '15rem';
 	
@@ -927,7 +930,19 @@ window.addEventListener('load', function(){
 	}
 
 
-	
+	// ADD SCROLL TO FORM BODY WHEN HEIGHT EXCEEDS 40VH
+
+	document.addEventListener('mousemove', function(){
+		// console.log('bigger as ' + formBody.offsetHeight);
+		// console.log(formBody.offsetHeight > window.innerHeight * 0.4);
+		
+		if(formBody.offsetHeight > window.innerHeight * 0.4){
+			formBody.classList.add('contain');
+			console.log(true);
+		}else{
+			formBody.classList.remove('contain');
+		}
+	});
 	
 
 })  ; 
