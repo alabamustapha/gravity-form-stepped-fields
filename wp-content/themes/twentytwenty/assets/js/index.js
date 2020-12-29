@@ -863,7 +863,7 @@ window.addEventListener('load', function(){
 	formBody.style.marginTop = (errorContainer !== null) ? '0' : '15rem';
 	
 	
-	// CREATING STEPS AND APPENDING TO POPUP
+	// CREATING STEPS AND PROGRESS BAR AND APPENDING TO POPUP
 	
 	// get all form pages that are done
 	let formPages = document.querySelectorAll('.gform_page');
@@ -929,6 +929,12 @@ window.addEventListener('load', function(){
 
 	}
 
+	// CREATE PROGRESS BAR
+
+	const progressBar = document.createElement('div');
+	progressBar.classList.add('gform_custom_progress_bar');
+	progressBar.style.width = `${(formPageIndex/formPagesLength) * 100}%`
+	popup.appendChild(progressBar);
 
 	// ADD SCROLL TO FORM BODY WHEN HEIGHT EXCEEDS 40VH
 

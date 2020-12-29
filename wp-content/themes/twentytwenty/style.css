@@ -6509,6 +6509,15 @@ a.to-the-top > * {
 	color: #fff;
 }
 
+.gform_custom_progress_bar{
+	width: 0%;
+	height: 5px;
+	background-color: #ecdfc3;
+	position: fixed;
+	top: 33px; 
+	left: 0;
+}
+
 
 /* GFORM HEADING */
 
@@ -6528,7 +6537,6 @@ body .gform_wrapper .gform_heading .gform_title {
 }
 
 /* GFORM-FOOTER */
-
 body .gform_wrapper .gform_page_footer {
 	position: fixed;
     bottom: 5rem;
@@ -6537,6 +6545,7 @@ body .gform_wrapper .gform_page_footer {
 	width: auto;
 	border-top: 0;
 }
+
 body .gform_wrapper .gform_body{
 	/* max-height: 40vh; */
 }
@@ -6545,6 +6554,17 @@ body .gform_wrapper .gform_body.contain{
 }
 
 /* GNEXT AND CONTINUE BUTTONS */
+.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
+	font-size: 2em;
+	border-radius: 40px !important;
+	font-weight: 700 !important;
+	text-transform: capitalize;
+	padding: 0.6em 1.5em !important; 
+
+}
+.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit]:hover{
+	text-decoration: none !important;
+}
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
@@ -6553,28 +6573,19 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
     border-radius: 40px;
     font-weight: 700;
 	color: rgba(0,0,0,0.4);
-	background-color: transparent;
+	background-color: transparent !important;
 	text-transform: capitalize;
 }
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button:hover,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button:hover {
 	color: #fff;
-	background-color: #232529;
+	background-color: #232529 !important;
 	text-decoration: none;
 }
-body .gform_wrapper .gform_footer input.button,
-body .gform_wrapper .gform_footer input[type=submit] {
-	border-radius: 40px !important;
-	font-weight: 700 !important;
-	text-transform: capitalize;
-	padding: 0.6em 1.5em !important;
-}
-
 
 body .gform_wrapper .gform_body .gform_fields .gsection{
 	display: none;
 }
-
 /* GFORM BODY */
 body .gform_wrapper .gform_body{
 	width: 70%;
@@ -6591,7 +6602,6 @@ body .gform_wrapper .gform_body{
 	overflow-y: scroll;
     overflow-x: hidden ;
 }
-
 
 /* GVALIDATION ERROR */
 body .gform_wrapper .gform_body .gform_fields .gfield_error{
@@ -6611,8 +6621,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
 	color: #eb7e7f !important;
 }
 
-
-
 /* INPUT FIELDS */
 
 /* Label */
@@ -6622,7 +6630,6 @@ body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label
 	margin-bottom: 3rem;
 	font-weight: 700;
 }
-
 /* INPUT */
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
@@ -6640,7 +6647,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[ty
 	font-size: 24px !important;
 	width: 100%;
 }
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox] {
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox],
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox] {
 	font-size: 20px !important;
 	padding-bottom: 0 !important;
 	border: 1px solid #232523 !important;
@@ -6650,7 +6658,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	border-bottom: 3px solid #232523 !important;
 
 }
-
 /* INPUT FIELD PLACEHOLDER FOR BOTH ERROR AND NORMAL STATE */
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input::placeholder,
 body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
@@ -6659,33 +6666,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
 	color: rgba(35, 37, 35, .7);
 	/* padding-bottom: 3rem; */
 }
-
-/* INPUT FIELD OF FILE UPLOAD */
-/* body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload input{
-	visibility: hidden;
-	width: 100%;
-	position: relative;
-} */
-/* body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload input::before{
-	content: 'Select a file';
-	z-index: 10;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: inline-block;
-	background: #fff;
-	border: 1px solid #999;
-	border-radius: 3px;
-	padding: 1rem 2rem;
-	outline: none;
-	white-space: nowrap;
-	-webkit-user-select: none;
-	cursor: pointer;
-	text-shadow: 1px 1px #fff;
-	font-weight: 700;
-	font-size: 24px;
-	color: #232523;
-} */
 
 /* date input field */
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
@@ -6721,8 +6701,13 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
 	color: #232523;
 	margin-left: 2rem;
 }
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox] ~ label{
+	font-size: 24px;
+	color: #fff;
+}
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li input[type=radio]:checked ~ label ,
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox]:checked ~ label {
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox]:checked ~ label,
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox]:checked ~ label {
 	font-weight: 700;
 	color: #ecdfc3;
 }
