@@ -1,0 +1,297 @@
+/* POPUP FORM STYLE */
+
+
+.gform-popup{
+	display: none;
+	width: 100% !important;
+	max-width: 100% !important;
+	height: 100vh;
+	position: fixed;
+	/* background-color: rgba(0,0,0,.7); */
+	background-color: #000;	
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 6rem;
+	backdrop-filter: blur(5px);
+}
+
+.gform-popup.show{
+	background-color: rgba(0,0,0,.7) !important;
+	display: block;
+}
+
+.gform-close-btn{
+	position: fixed;
+	bottom: 5rem;
+	left: 6rem;
+	color: rgba(255,255,255, .5);
+	font-weight: 600;
+	font-size: 24px;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.gform-close-btn:hover{
+	color: #fff;
+}
+
+.gform_custom_progress_bar{
+	width: 0%;
+	height: 5px;
+	background-color: #ecdfc3;
+	position: fixed;
+	top: 33px; 
+	left: 0;
+}
+
+
+/* GFORM HEADING */
+
+.gform_wrapper .gform_heading{
+	margin-bottom: 8rem !important;
+}
+
+body .gform_wrapper .gform_heading .gform_title {
+	color: #fff;
+	font-size: 1.5em;
+}
+
+/* GHIDE DEFAULT PROGRESS BAR */
+
+.gform_wrapper .gf_progressbar_wrapper{
+	display: none;
+}
+
+/* GFORM-FOOTER */
+body .gform_wrapper .gform_page_footer {
+	position: fixed;
+    bottom: 5rem;
+    right: 6rem;
+    display: inline-block;
+	width: auto;
+	border-top: 0;
+}
+
+body .gform_wrapper .gform_body{
+	/* max-height: 40vh; */
+}
+body .gform_wrapper .gform_body.contain{
+	overflow-y: scroll;
+}
+
+/* GNEXT AND CONTINUE BUTTONS */
+.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
+	font-size: 2em;
+	border-radius: 40px !important;
+	font-weight: 700 !important;
+	text-transform: capitalize;
+	padding: 0.6em 1.5em !important; 
+
+}
+.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit]:hover{
+	text-decoration: none !important;
+}
+
+body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
+	padding: 0.6em 1.5em;
+    border: 3px solid #232529;
+    border-radius: 40px;
+    font-weight: 700;
+	color: rgba(0,0,0,0.4);
+	background-color: transparent !important;
+	text-transform: capitalize;
+}
+body .gform_wrapper .gform_body .gform_page_footer .gform_next_button:hover,
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button:hover {
+	color: #fff;
+	background-color: #232529 !important;
+	text-decoration: none;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gsection{
+	display: none;
+}
+/* GFORM BODY */
+body .gform_wrapper .gform_body{
+	width: 70%;
+	margin: 0 auto;
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%); */
+	margin-top: 10rem;
+}
+.gform_wrapper .ginput_complex.ginput_container {
+	width: 100%;
+	height: 45vh !important;
+	overflow-y: scroll;
+    overflow-x: hidden ;
+}
+
+/* GVALIDATION ERROR */
+body .gform_wrapper .gform_body .gform_fields .gfield_error{
+	background-color: transparent;
+	border: 0;
+}
+body .gform_wrapper .validation_error{
+	border: 0 !important;
+	width: 70% !important;
+	margin: 0 auto;	
+	margin-bottom: 0 !important;
+	color: #eb7e7f !important;
+	font-weight: 700;
+	text-align: left !important;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
+	color: #eb7e7f !important;
+}
+
+/* INPUT FIELDS */
+
+/* Label */
+body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+	color: #fff;
+	font-size: 40px;
+	margin-bottom: 3rem;
+	font-weight: 700;
+}
+/* INPUT */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid #232523;
+	border-radius: 0;
+	font-size: 48px !important;
+	font-weight: 700;
+	padding-bottom: 2rem !important;
+	color:  #ecdfc3;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=file]{
+	font-size: 24px !important;
+	width: 100%;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox],
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox] {
+	font-size: 20px !important;
+	padding-bottom: 0 !important;
+	border: 1px solid #232523 !important;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+	border: none !important;
+	border-bottom: 3px solid #232523 !important;
+
+}
+/* INPUT FIELD PLACEHOLDER FOR BOTH ERROR AND NORMAL STATE */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input::placeholder,
+body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
+	font-size: 48px !important;
+	font-weight: 700;
+	color: rgba(35, 37, 35, .7);
+	/* padding-bottom: 3rem; */
+}
+
+/* date input field */
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
+	width: 10rem !important;
+	max-width: 10rem !important;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day input,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month input,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year input,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour input,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute input,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select{
+	width: 10rem !important;
+	max-width: 10rem !important	;
+	margin: 0 auto !important;
+	
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute{
+	margin-right: 2rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
+	font-size: 36px;
+	font-weight: 500;
+	color: #232523;
+	margin-left: 2rem;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox] ~ label{
+	font-size: 24px;
+	color: #fff;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li input[type=radio]:checked ~ label ,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox]:checked ~ label,
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox]:checked ~ label {
+	font-weight: 700;
+	color: #ecdfc3;
+}
+
+/* product field */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct{
+	display: flex;
+	align-items: flex-end;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price_label,
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price,
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity_label{
+	font-size: 36px;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price{
+	color: #eb7e7f;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity{
+	width: 10rem !important;
+	padding-bottom: 0 !important;
+	margin-left: 3rem;
+}
+
+
+
+/* STEPS COUNTER */
+.gform-step-counter{
+	position: absolute;
+	top: 6rem;
+	right: 6rem;
+	font-size: 36px;
+	font-weight: 700;
+	color: #232523;
+}
+
+.gform-step-dots-wrapper{
+	display: grid;
+	grid-auto-flow: row;
+	gap: 1.5rem;
+	position: absolute;
+	top: 50%;
+	right: 6rem;
+	transform: translateY(-50%);
+}
+.gform-step-dot{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: rgba(35, 37, 35,.3);
+	cursor: pointer;
+	transition: all .3s;
+}
+.gform-step-dot.active,
+.gform-step-dot:hover{
+	background-color: #ecdfc3 !important;
+}
+.gform-step-dot.dirty{
+	background-color: #232523;
+}
+
