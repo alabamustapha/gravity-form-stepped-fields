@@ -6751,6 +6751,17 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
 	width: 150px !important;
 	max-width: 150px !important;
 }
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
+	width: 80px !important;
+	max-width: 80px !important;
+	}
+}
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day input,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month input,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year input,
@@ -6762,6 +6773,20 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select{
 	margin: 0 auto !important;
 	
 }
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select{
+		width: 80 !important;
+		max-width: 80 !important;
+	}
+}
+
+
+
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
@@ -6770,15 +6795,35 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute{
 }
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
-	font-size: 36px;
+	font-size: 20px;
 	font-weight: 500;
 	color: #232523;
 	margin-left: 20px;
 }
+
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
+		font-size: 28px;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
+		font-size: 36px;
+	}
+}
+
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox] ~ label{
-	font-size: 24px;
+	font-size: 20px;
 	color: #fff;
 }
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox] ~ label{
+		font-size: 24px;
+	}
+}
+
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li input[type=radio]:checked ~ label ,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox]:checked ~ label,
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox]:checked ~ label {
@@ -6787,18 +6832,35 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[ty
 }
 
 /* product field */
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct{
-	display: flex;
-	align-items: flex-end;
+/* body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct{
+	
+} */
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct{
+		display: flex;
+		align-items: flex-end;
+	}
 }
+
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price_label,
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price,
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity_label{
-	font-size: 36px;
+	font-size: 24px;
+	display: inline-block !important;
 }
+
+@media (min-width: 768px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price_label,
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price,
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity_label{
+		font-size: 36px;
+	}
+}
+
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price{
 	color: #eb7e7f;
 }
+
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity{
 	width: 100px !important;
 	padding-bottom: 0 !important;
