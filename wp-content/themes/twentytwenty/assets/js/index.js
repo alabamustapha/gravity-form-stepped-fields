@@ -931,7 +931,13 @@ window.addEventListener('load', function(){
 	jQuery(document).on('gform_page_loaded', function(event, form_id, current_page){
 		processNextStep(current_page);
 		formPageIndex = (current_page > formPageIndex) ? current_page : formPageIndex;
-		
+		if(current_page >= formPageIndex){
+			console.log(formPages[current_page - 1 ]);
+			formPages[current_page - 1 ].classList.add('gform_enter');
+		}else{
+			// console.log(formPages[current_page]);
+			// formPages[current_page].classList.add('gform_exit');
+		}
 	});
 	
 	dots.forEach(dot => {

@@ -6488,9 +6488,19 @@ a.to-the-top > * {
 	top: 0;
 	left: 0;
 	z-index: 1000;
-	padding: 60px;
+	padding: 60px 16px;
 	backdrop-filter: blur(5px);
-   font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+@media (min-width: 576px){
+	.gform-popup{
+		padding: 60px 24px;
+	}
+}
+@media (min-width: 768px){
+	.gform-popup{
+		padding: 60px;
+	}
 }
 
 .gform-popup.show{
@@ -6554,9 +6564,7 @@ body .gform_wrapper .gform_page_footer {
 	border-top: 0;
 }
 
-body .gform_wrapper .gform_body{
-	/* max-height: 40vh; */
-}
+
 body .gform_wrapper .gform_body.contain{
 	overflow-y: scroll;
 }
