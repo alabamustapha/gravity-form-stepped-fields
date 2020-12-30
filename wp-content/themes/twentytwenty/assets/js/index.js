@@ -931,12 +931,24 @@ window.addEventListener('load', function(){
 	jQuery(document).on('gform_page_loaded', function(event, form_id, current_page){
 		processNextStep(current_page);
 		formPageIndex = (current_page > formPageIndex) ? current_page : formPageIndex;
+
+
+		
 		if(current_page >= formPageIndex){
 			console.log(formPages[current_page - 1 ]);
 			formPages[current_page - 1 ].classList.add('gform_enter');
+
+			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", 200)
+			
+			move('#gform_page_1_' + current_page + ' .gform_page_fields')
+				.add("margin-top", -200)
+				.end();
 		}else{
-			// console.log(formPages[current_page]);
-			// formPages[current_page].classList.add('gform_exit');
+			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", -200)
+		
+			move('#gform_page_1_' + current_page + ' .gform_page_fields')
+				.add("margin-top", 200)
+				.end();
 		}
 	});
 	
