@@ -6636,9 +6636,9 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
 	position: relative;
 	/*    0.6em 1.5em before	 */
 	padding: 4px 4px !important; 
-	border:3px solid #FC9003;
+	border:3px solid #00274E;
     font-weight: 600;
-	color: #FC9003;
+	color: #00274E;
 	/* color: rgba(0,0,0,0.4); */
 	background-color: transparent !important;
 	text-transform: capitalize;
@@ -6712,7 +6712,7 @@ body .gform_wrapper .validation_error{
 	border: 0 !important;
 	width: 70% !important;
 	margin-bottom: 0 !important;
-	color: #eb7e7f !important;
+	color: #FC9003 !important;
 	font-weight: 500;
 	text-align: left !important;
 	font-size: 16px !important;
@@ -6729,7 +6729,7 @@ body .gform_wrapper .validation_error{
 
 
 body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
-	color: #eb7e7f !important;
+	color: #FC9003 !important;
 }
 
 /* INPUT FIELDS */
