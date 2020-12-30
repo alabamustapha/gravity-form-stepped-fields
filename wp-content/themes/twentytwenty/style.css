@@ -6520,6 +6520,7 @@ a.to-the-top > * {
   font-family: inherit;
 }
 
+
 .gform-close-btn:hover{
 	color: #fff;
 }
@@ -6545,7 +6546,21 @@ body .gform_wrapper{
 
 body .gform_wrapper .gform_heading .gform_title {
 	color: #fff;
-	font-size: 24px ;/* was "1.5em" before*/
+	font-size: 20px ; /* was "1.5em" before*/
+	width:80%;
+	line-height: 1.5;
+}
+
+@media (min-width: 576px){
+	body .gform_wrapper .gform_heading .gform_title {
+		width: 100%;
+		font-size: 24px;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .gform_heading .gform_title {
+		font-size: 28px ;
+	}
 }
 
 /* GHIDE DEFAULT PROGRESS BAR */
@@ -6764,7 +6779,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 	position: absolute;
 	top: 60px;
 	right: 60px;
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: 600;
 	color: #232523;
 }
