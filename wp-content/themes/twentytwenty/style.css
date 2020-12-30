@@ -6520,8 +6520,6 @@ a.to-the-top > * {
   font-family: inherit;
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width: 576px){
 	.gform-close-btn{
 		font-size: 20px;
@@ -6536,7 +6534,6 @@ a.to-the-top > * {
 		left: 60px;
 	}
 }
->>>>>>> 4ae86f768906cb310517d857aec923ee03090dc6
 
 .gform-close-btn:hover{
 	color: #fff;
