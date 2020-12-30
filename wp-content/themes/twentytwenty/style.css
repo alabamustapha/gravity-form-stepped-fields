@@ -6740,7 +6740,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	border: none;
 	border-bottom: 3px solid #232523;
 	border-radius: 0;
-	font-size: 18px !important;
+	font-size: 20px !important;
 	font-weight: 500;
 	padding-bottom: 0 !important;
 	color:  #ecdfc3;
@@ -6750,7 +6750,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
 	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
-		font-size: 30px !important;
+		font-size: 32px !important;
 		padding-bottom: 10px !important;
 	}
 }
