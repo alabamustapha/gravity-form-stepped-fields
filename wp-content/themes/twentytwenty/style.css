@@ -6673,17 +6673,20 @@ body .gform_wrapper .gform_body .gform_fields .gsection{
 /* GFORM BODY */
 body .gform_wrapper .gform_body{
 	width: 80%;
-	margin-top: 80px;
+	margin-top: 20px;
 }
+
 @media (min-width: 576px){
 	body .gform_wrapper .gform_body{
 		padding: 60px 24px;
+		
 	}
 }
 @media (min-width: 768px){
 	body .gform_wrapper .gform_body{
 		width: 70%;
 		margin: 0 auto;
+		margin-top: 80px;
 	}
 }
 
