@@ -6615,7 +6615,7 @@ body .gform_wrapper .gform_body.contain{
 .gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
 	/* was 2em before	 */
   	font-size: 20px; 
-	border-radius: 40px !important;
+	border-radius: 8px !important;
 	font-weight: 600 !important;
 	text-transform: capitalize;
 	/*    0.6em 1.5em before	 */
@@ -6630,14 +6630,24 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
 	/*    0.6em 1.5em before	 */
 	padding: 4px 4px !important; 
-    border: 3px solid #232529;
-    border-radius: 40px;
+	border: 3px inset #FC9003;
+	/* box-shadow: 0 0 0 3px #FC9003; */
+	
+    /* border: 3px solid #232529; */
+    border-radius: 4px;
     font-weight: 600;
-	color: rgba(0,0,0,0.4);
+	color: #FC9003;
+	/* color: rgba(0,0,0,0.4); */
 	background-color: transparent !important;
 	text-transform: capitalize;
 	margin-right: 16px;
 	margin-bottom: 0 !important;
+}
+body .gform_wrapper .gform_body .gform_page_footer .gform_next_button{
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 51%, 0% 0%);
+}
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
+	clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)
 }
 
 @media (min-width: 576px){
@@ -6660,7 +6670,7 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button:hover,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button:hover {
 	color: #fff;
-	background-color: #232529 !important;
+	background-color: #FC9003 !important;
 	text-decoration: none;
 }
 
@@ -6958,17 +6968,31 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 .gform-step-dot{
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
-	background-color: rgba(35, 37, 35,.3);
+	border-radius: 2px;
+	background-color: rgba(0, 39, 78, .5);
 	cursor: pointer;
 	transition: all .3s;
 }
+.gform-step-dot:first-child,
+.gform-step-dot:last-child{
+	border: 2px solid rgba(0, 39, 78, .5);
+	background-color: transparent !important;
+}
+
 .gform-step-dot.active,
 .gform-step-dot:hover{
-	background-color: #ecdfc3 !important;
+	background-color:  #FC9003 !important;
 }
 .gform-step-dot.dirty{
-	background-color: #232523;
+	background-color: #00274E;
+}
+.gform-step-dot:first-child.dirty,
+.gform-step-dot:last-child.dirty{
+	border: 2px solid #00274E;
+}
+.gform-step-dot:first-child.active,
+.gform-step-dot:last-child.active{
+	border: 2px solid #FC9003;
 }
 
 
