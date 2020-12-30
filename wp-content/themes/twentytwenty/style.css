@@ -6510,26 +6510,26 @@ a.to-the-top > * {
 
 .gform-close-btn{
 	position: fixed;
-	bottom: 24px;
+	bottom: 16px;
 	left: 16px;
 	color:  #00274E;
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 14px;
 	cursor: pointer;
 	transition: all .3s;
 	font-family: inherit;
-	padding: 5px 10px;
+	padding: 2px 8px;
 	border-radius: 8px;
 	border: 3px solid  #00274E;
 	}
 
-@media (min-width: 576px){
+/* @media (min-width: 576px){
 	.gform-close-btn{
 		font-size: 20px;
 		bottom: 40px;
 		left: 16px;
 	}
-}
+} */
 @media (min-width: 768px){
 	.gform-close-btn{
 		font-size: 24px;
@@ -6548,7 +6548,7 @@ a.to-the-top > * {
 	height: 5px;
 	background-color: #FC9003;
 	position: fixed;
-	top: 33px; 
+	top: 0; 
 	left: 0;
 	transition: all .3s ease;
 }
@@ -6646,8 +6646,8 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
 	/* color: rgba(0,0,0,0.4); */
 	background-color: transparent !important;
 	text-transform: capitalize;
-	/* margin-right: 16px;
-	margin-bottom: 0 !important; */
+	margin-right: 16px;
+	margin-bottom: 0 !important;
 }
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button{
@@ -6810,10 +6810,23 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 /* INPUT FIELD PLACEHOLDER FOR BOTH ERROR AND NORMAL STATE */
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input::placeholder,
 body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
-	font-size: 48px !important;
+	font-size: 20px !important;
 	font-weight: 500;
 	color: rgba(35, 37, 35, .7);
 	/* padding-bottom: 3rem; */
+}
+
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input::placeholder,
+	body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
+		font-size: 28px !important;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input::placeholder,
+	body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
+		font-size: 40px !important;
+	}
 }
 
 /* date input field */
@@ -6988,7 +7001,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 .gform-step-dot{
 	width: 20px;
 	height: 20px;
-	border-radius: 2px;
+	border-radius: 50%;
 	background-color: #00274E;
 	cursor: pointer;
 	transition: all .3s;
