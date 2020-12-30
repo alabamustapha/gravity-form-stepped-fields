@@ -6740,10 +6740,27 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	border: none;
 	border-bottom: 3px solid #232523;
 	border-radius: 0;
-	font-size: 48px !important;
+	font-size: 18px !important;
 	font-weight: 500;
-	padding-bottom: 20px !important;
+	padding-bottom: 0 !important;
 	color:  #ecdfc3;
+}
+
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+		font-size: 30px !important;
+		padding-bottom: 10px !important;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+		font-size: 40px !important;
+		padding-bottom: 20px !important;
+	}
 }
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=file]{
 	font-size: 24px !important;
