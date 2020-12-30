@@ -6504,7 +6504,7 @@ a.to-the-top > * {
 }
 
 .gform-popup.show{
-	background-color: rgba(0,0,0,.7) !important;
+	background-color: #F4F5F7 !important;
 	display: block;
 }
 
@@ -6512,13 +6512,16 @@ a.to-the-top > * {
 	position: fixed;
 	bottom: 24px;
 	left: 16px;
-	color: rgba(255,255,255, .5);
+	color:  #00274E;
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 16px;
 	cursor: pointer;
 	transition: all .3s;
-  font-family: inherit;
-}
+	font-family: inherit;
+	padding: 5px 10px;
+	border-radius: 8px;
+	border: 3px solid  #00274E;
+	}
 
 @media (min-width: 576px){
 	.gform-close-btn{
@@ -6537,6 +6540,7 @@ a.to-the-top > * {
 
 .gform-close-btn:hover{
 	color: #fff;
+	background-color: #00274E;
 }
 
 .gform_custom_progress_bar{
@@ -6559,7 +6563,7 @@ body .gform_wrapper{
 
 
 body .gform_wrapper .gform_heading .gform_title {
-	color: #fff;
+	color: #00274E;
 	font-size: 20px ; /* was "1.5em" before*/
 	width:80%;
 	line-height: 1.5;
@@ -6628,27 +6632,32 @@ body .gform_wrapper .gform_body.contain{
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
+	display: inline-block;
+	position: relative;
 	/*    0.6em 1.5em before	 */
 	padding: 4px 4px !important; 
-	border: 3px inset #FC9003;
+	border:2px solid #FC9003;
 	/* box-shadow: 0 0 0 3px #FC9003; */
 	
-    /* border: 3px solid #232529; */
-    border-radius: 4px;
+	/* border: 3px solid #232529; */
+    /* border-radius: 4px; */
     font-weight: 600;
 	color: #FC9003;
 	/* color: rgba(0,0,0,0.4); */
 	background-color: transparent !important;
 	text-transform: capitalize;
-	margin-right: 16px;
-	margin-bottom: 0 !important;
+	/* margin-right: 16px;
+	margin-bottom: 0 !important; */
 }
+
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button{
-	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 51%, 0% 0%);
+	border-right: none;
 }
+
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
-	clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)
+	border-left: none;
 }
+
 
 @media (min-width: 576px){
 	body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
@@ -6737,7 +6746,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
 
 /* Label */
 body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
-	color: #fff;
+	color: #00274E;
 	font-size: 24px;
 	font-weight: 700;
 }
@@ -6764,7 +6773,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	font-size: 20px !important;
 	font-weight: 500;
 	padding-bottom: 0 !important;
-	color:  #ecdfc3;
+	color:  #333333;
 }
 
 @media (min-width: 576px){
@@ -6980,7 +6989,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 	width: 20px;
 	height: 20px;
 	border-radius: 2px;
-	background-color: rgba(0, 39, 78, .5);
+	background-color: #00274E;
 	cursor: pointer;
 	transition: all .3s;
 }
