@@ -6699,12 +6699,23 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error{
 body .gform_wrapper .validation_error{
 	border: 0 !important;
 	width: 70% !important;
-	margin: 0 auto;	
 	margin-bottom: 0 !important;
 	color: #eb7e7f !important;
 	font-weight: 500;
 	text-align: left !important;
+	font-size: 16px !important;
 }
+
+@media (min-width: 576px){
+	body .gform_wrapper .validation_error{
+		margin: 0 auto;	
+
+		font-size: 24px;
+	}
+}
+
+
+
 body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
 	color: #eb7e7f !important;
 }
@@ -6715,12 +6726,12 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
 body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
 	color: #fff;
 	font-size: 24px;
-	margin-bottom: 30px;
 	font-weight: 700;
 }
 
 @media (min-width: 576px){
 	body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+		margin-bottom: 30px;
 		font-size: 34px;
 	}
 }
