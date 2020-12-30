@@ -6520,8 +6520,6 @@ a.to-the-top > * {
   font-family: inherit;
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width: 576px){
 	.gform-close-btn{
 		font-size: 20px;
@@ -6536,7 +6534,6 @@ a.to-the-top > * {
 		left: 60px;
 	}
 }
->>>>>>> 4ae86f768906cb310517d857aec923ee03090dc6
 
 .gform-close-btn:hover{
 	color: #fff;
@@ -6743,7 +6740,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	border: none;
 	border-bottom: 3px solid #232523;
 	border-radius: 0;
-	font-size: 18px !important;
+	font-size: 20px !important;
 	font-weight: 500;
 	padding-bottom: 0 !important;
 	color:  #ecdfc3;
@@ -6753,7 +6750,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
 	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
-		font-size: 30px !important;
+		font-size: 32px !important;
 		padding-bottom: 10px !important;
 	}
 }
