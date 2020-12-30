@@ -6717,9 +6717,20 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
 /* Label */
 body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
 	color: #fff;
-	font-size: 40px;
+	font-size: 24px;
 	margin-bottom: 30px;
 	font-weight: 700;
+}
+
+@media (min-width: 576px){
+	body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+		font-size: 34px;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+		font-size: 40px;
+	}
 }
 /* INPUT */
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
