@@ -6520,6 +6520,8 @@ a.to-the-top > * {
   font-family: inherit;
 }
 
+<<<<<<< HEAD
+=======
 @media (min-width: 576px){
 	.gform-close-btn{
 		font-size: 20px;
@@ -6534,6 +6536,7 @@ a.to-the-top > * {
 		left: 60px;
 	}
 }
+>>>>>>> 4ae86f768906cb310517d857aec923ee03090dc6
 
 .gform-close-btn:hover{
 	color: #fff;
@@ -6560,7 +6563,21 @@ body .gform_wrapper{
 
 body .gform_wrapper .gform_heading .gform_title {
 	color: #fff;
-	font-size: 24px ;/* was "1.5em" before*/
+	font-size: 20px ; /* was "1.5em" before*/
+	width:80%;
+	line-height: 1.5;
+}
+
+@media (min-width: 576px){
+	body .gform_wrapper .gform_heading .gform_title {
+		width: 100%;
+		font-size: 24px;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .gform_heading .gform_title {
+		font-size: 28px ;
+	}
 }
 
 /* GHIDE DEFAULT PROGRESS BAR */
@@ -6700,9 +6717,20 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message{
 /* Label */
 body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
 	color: #fff;
-	font-size: 40px;
+	font-size: 24px;
 	margin-bottom: 30px;
 	font-weight: 700;
+}
+
+@media (min-width: 576px){
+	body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+		font-size: 34px;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+		font-size: 40px;
+	}
 }
 /* INPUT */
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
@@ -6712,10 +6740,27 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	border: none;
 	border-bottom: 3px solid #232523;
 	border-radius: 0;
-	font-size: 48px !important;
+	font-size: 18px !important;
 	font-weight: 500;
-	padding-bottom: 20px !important;
+	padding-bottom: 0 !important;
 	color:  #ecdfc3;
+}
+
+@media (min-width: 576px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+		font-size: 30px !important;
+		padding-bottom: 10px !important;
+	}
+}
+@media (min-width: 768px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+		font-size: 40px !important;
+		padding-bottom: 20px !important;
+	}
 }
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=file]{
 	font-size: 24px !important;
