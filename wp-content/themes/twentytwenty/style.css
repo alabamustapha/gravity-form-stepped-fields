@@ -6542,7 +6542,7 @@ a.to-the-top > * {
 .gform_custom_progress_bar{
 	width: 0%;
 	height: 5px;
-	background-color: #ecdfc3;
+	background-color: #FC9003;
 	position: fixed;
 	top: 33px; 
 	left: 0;
@@ -6749,7 +6749,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
 body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	background-color: transparent;
 	border: none;
-	border-bottom: 3px solid #232523;
+	border-bottom: 3px solid #00274E;
 	border-radius: 0;
 	font-size: 20px !important;
 	font-weight: 500;
@@ -6932,7 +6932,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 	right: 16px;
 	font-size: 16px;
 	font-weight: 600;
-	color: #232523;
+	color: #00274E;
 }
 @media (min-width: 576px){
 	.gform-step-counter{
@@ -6980,6 +6980,11 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 }
 .gform-step-dot.dirty{
 	background-color: #232523;
+}
+
+/* INPUT REQUIRE */
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label .gfield_required{
+	color:  #FC9003;
 }
 
 
