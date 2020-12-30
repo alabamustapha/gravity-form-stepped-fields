@@ -6535,6 +6535,7 @@ a.to-the-top > * {
 		font-size: 18px;
 		bottom: 50px;
 		left: 60px;
+		padding: 10px 24px !important;
 	}
 }
 
