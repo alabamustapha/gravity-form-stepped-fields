@@ -841,7 +841,7 @@ window.addEventListener('load', function(){
 	let formCloseBtn = document.createElement('span');
 	
 	formCloseBtn.classList.add('gform-close-btn');
-	formCloseBtn.textContent = 'Close form';
+	formCloseBtn.textContent = 'Close';
 	// console.log(formCloseBtn);
 	
 	popup.appendChild(formCloseBtn);

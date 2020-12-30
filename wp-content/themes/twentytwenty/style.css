@@ -6518,7 +6518,7 @@ a.to-the-top > * {
 	cursor: pointer;
 	transition: all .3s;
 	font-family: inherit;
-	padding: 2px 8px;
+	padding: 2px 16px;
 	border-radius: 8px;
 	border: 3px solid  #00274E;
 	}
@@ -6532,7 +6532,7 @@ a.to-the-top > * {
 } */
 @media (min-width: 768px){
 	.gform-close-btn{
-		font-size: 24px;
+		font-size: 18px;
 		bottom: 50px;
 		left: 60px;
 	}
@@ -6603,7 +6603,7 @@ body .gform_wrapper .gform_page_footer {
 @media (min-width: 768px){
 	body .gform_wrapper .gform_page_footer{
 		position: fixed;
-		bottom: 50px;
+		bottom: 20px;
 		right: 60px;
 		display: inline-block;
 		width: auto;
@@ -6669,7 +6669,7 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_next_button:hover,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button:hover {
 	color: #fff;
 	background-color: #00274E !important;
-	border: 0;
+	border:3px solid #00274E;
 	text-decoration: none;
 }
 
