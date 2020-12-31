@@ -928,10 +928,19 @@ window.addEventListener('load', function(){
 	
 	processNextStep(formPageIndex);
 
+	function complexFormscroll(currentPage){
+		let scrollEl = currentPage
+
+		if(scrollEl.height() > window.innerHeight* 0.4){
+			scrollEl.addClass('scrollable');
+		}
+	}
+
 	jQuery(document).on('gform_page_loaded', function(event, form_id, current_page){
 		processNextStep(current_page);
 		formPageIndex = (current_page > formPageIndex) ? current_page : formPageIndex;
 
+		complexFormscroll(jQuery('#gform_page_1_' + current_page + ' .gform_page_fields .ginput_complex' ));
 
 		
 		if(current_page >= formPageIndex){
@@ -944,6 +953,7 @@ window.addEventListener('load', function(){
 				.add("margin-top", -200)
 				.end();
 		}else{
+
 			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", -200)
 		
 			move('#gform_page_1_' + current_page + ' .gform_page_fields')
@@ -961,21 +971,11 @@ window.addEventListener('load', function(){
 		});
 	})
 
-	// for(let i =currentPage -1 ; i >= 0; i--){
-	// 	formPages = [...formPages];
-	// 	// change form on dot click
-	// 	dots[i].addEventListener('click', function(e){
-	// 		e.preventDefault();
-	// 		addActiveClassToDots();
-	// 		console.log(this.dataset.stepIndex);
-	// 		jQuery("#gform_target_page_number_1").val(this.dataset.stepIndex);  
-	// 		jQuery("#gform_1").trigger("submit",[true]); 
-	// 		// formPages.forEach(el => el.style.display = 'none');
-	// 		// formPages[i].style.display = '';
-	// 	});
+	// DAY MONTH YEAR SWITCH
 
-	// }
-
+	let dayInput = document.querySelector('.gfield_date_day input');
+	let monthInput = document.querySelector('.gfield_date_month input');
+	let yearInput = document.querySelector('.gfield_date_year input');
 
 
 	
