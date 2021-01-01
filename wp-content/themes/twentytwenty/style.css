@@ -6617,22 +6617,11 @@ body .gform_wrapper .gform_body.contain{
 }
 
 /* GNEXT AND CONTINUE BUTTONS */
-.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
-	/* was 2em before	 */
-  	font-size: 20px; 
-	border-radius: 8px !important;
-	font-weight: 600 !important;
-	text-transform: capitalize;
-	/*    0.6em 1.5em before	 */
-	padding: 10px 24px !important; 
 
-}
-.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit]:hover{
-	text-decoration: none !important;
-}
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
-body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button,
+.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
 	display: inline-block;
 	position: relative;
 	/*    0.6em 1.5em before	 */
@@ -6645,13 +6634,15 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
 	text-transform: capitalize;
 	margin-right: 16px;
 	margin-bottom: 0 !important;
+	border-radius: 8px;
 }
 
 
 
 @media (min-width: 576px){
 	body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
-	body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
+	body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button,
+	.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
 		padding: 8px 20px !important;
 		margin-right: 0 !important;
 		margin-bottom: 8px !important;
@@ -6659,7 +6650,8 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
 }
 @media (min-width: 768px){
 	body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
-	body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
+	body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button,
+	.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
 		padding: 10px 24px !important;
 		margin-right: 0 !important;
 		margin-bottom: 8px !important;
@@ -6667,7 +6659,8 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button{
 }
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button:hover,
-body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button:hover {
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button:hover,
+.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit]:hover {
 	color: #fff;
 	background-color: #00274E !important;
 	border:3px solid #00274E;
@@ -6681,6 +6674,9 @@ body .gform_wrapper .gform_body .gform_fields .gsection{
 body .gform_wrapper .gform_body{
 	width: 80%;
 	margin-top: 20px;
+}
+body .gform_wrapper .gform_body a{
+	color: #FC9003;
 }
 
 @media (min-width: 576px){
@@ -6840,8 +6836,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
-	width: 80px !important;
-	max-width: 80px !important;
+	width: 10px !important;
+	max-width: 100px !important;
 	}
 }
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day input,
@@ -6862,8 +6858,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select{
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour input,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute input,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select{
-		width: 80px !important;
-		max-width: 80px !important;
+		width: 100px !important;
+		max-width: 100px !important;
 	}
 }
 
@@ -6880,6 +6876,25 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute{
 	margin-right: 20px;
 } */
+
+/* RADIO AND CHECKBOXES */
+
+/* checkbox container */
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox{
+	display: block;
+}
+
+@media (min-width: 768px){
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox{
+		display: flex;
+		gap: 2rem;
+	}
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li{
+		display: flex;
+		align-items: center;
+	}
+}
+
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
 	font-size: 20px;

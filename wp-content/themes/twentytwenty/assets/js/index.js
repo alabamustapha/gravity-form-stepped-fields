@@ -1002,7 +1002,6 @@ window.addEventListener('load', function(){
 		});
 	})
 
-	// DAY MONTH YEAR SWITCH
 
 
 
