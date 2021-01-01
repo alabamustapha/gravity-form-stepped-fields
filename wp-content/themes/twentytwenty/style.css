@@ -6869,12 +6869,17 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select{
 
 
 
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_date:not(:last-child)
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_time:not(:last-child){
+	margin-right: 20px;
+	background-color: red !important;
+}
+/* body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute{
 	margin-right: 20px;
-}
+} */
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
 	font-size: 20px;

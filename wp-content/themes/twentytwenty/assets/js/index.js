@@ -936,30 +936,61 @@ window.addEventListener('load', function(){
 		}
 	}
 
+
+
+	function adaptiveFocusDate(){
+		// Get input fields containers and spread them to arrays instead of nodeLists
+		let dateInputs = [...document.querySelector('.clear-multi').children];
+		dateInputs.forEach(function(field, index){
+			// select input fields inside of the containers
+		
+			let input = field.querySelector('input');
+			input.addEventListener('keyup', function(){
+				let valueCount = 2;
+				if(this.parentNode.classList.contains('gfield_date_year')){
+					valueCount = 4;
+				}
+				if(this.value.length == valueCount){
+					// swap to next input field and focus on it
+					dateInputs[index + 1].querySelector('input').focus();
+				}
+			})
+		})
+	}
+
 	jQuery(document).on('gform_page_loaded', function(event, form_id, current_page){
+	
+
+		// FOCUS ON DATE FIELDS AFTER EACH IS COMPLETED AND IF THERE IS A DATE FIELD
+		adaptiveFocusDate();
+
 		processNextStep(current_page);
 		formPageIndex = (current_page > formPageIndex) ? current_page : formPageIndex;
 
+		// ADD SCROLLING TO COMPLEX FORM
 		complexFormscroll(jQuery('#gform_page_1_' + current_page + ' .gform_page_fields .ginput_complex' ));
 
-		
+		// ADD ANIMATTION TO PAGE
 		if(current_page >= formPageIndex){
 			console.log(formPages[current_page - 1 ]);
 			formPages[current_page - 1 ].classList.add('gform_enter');
 
-			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", 200)
+			// jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", 200)
 			
-			move('#gform_page_1_' + current_page + ' .gform_page_fields')
-				.add("margin-top", -200)
-				.end();
+			// move('#gform_page_1_' + current_page + ' .gform_page_fields')
+			// 	.add("margin-top", -200)
+			// 	.end();
 		}else{
 
-			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", -200)
+			// jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", -200)
 		
-			move('#gform_page_1_' + current_page + ' .gform_page_fields')
-				.add("margin-top", 200)
-				.end();
+			// move('#gform_page_1_' + current_page + ' .gform_page_fields')
+			// 	.add("margin-top", 200)
+			// 	.end();
 		}
+
+		// ADD FOCUS ON DAY MONTH YEAR
+
 	});
 	
 	dots.forEach(dot => {
@@ -973,9 +1004,7 @@ window.addEventListener('load', function(){
 
 	// DAY MONTH YEAR SWITCH
 
-	let dayInput = document.querySelector('.gfield_date_day input');
-	let monthInput = document.querySelector('.gfield_date_month input');
-	let yearInput = document.querySelector('.gfield_date_year input');
+
 
 
 	
