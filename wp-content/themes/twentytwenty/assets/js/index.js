@@ -975,21 +975,27 @@ window.addEventListener('load', function(){
 			console.log(formPages[current_page - 1 ]);
 			formPages[current_page - 1 ].classList.add('gform_enter');
 
-			// jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", 200)
+			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", 200)
 			
-			// move('#gform_page_1_' + current_page + ' .gform_page_fields')
-			// 	.add("margin-top", -200)
-			// 	.end();
+			move('#gform_page_1_' + current_page + ' .gform_page_fields')
+				.add("margin-top", -200)
+				.end();
 		}else{
 
-			// jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", -200)
+			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", -200)
 		
-			// move('#gform_page_1_' + current_page + ' .gform_page_fields')
-			// 	.add("margin-top", 200)
-			// 	.end();
+			move('#gform_page_1_' + current_page + ' .gform_page_fields')
+				.add("margin-top", 200)
+				.end();
 		}
 
-		// ADD FOCUS ON DAY MONTH YEAR
+		// CHECK IF FILEUPLOAD IS PRESENT AND TRIGGER NEXT BUTTON ON ENTER CLICK
+      
+		jQuery("div#gform_page_1_" + current_page).find("input[type='file']").change(function(event){
+			jQuery(this).blur();
+			jQuery("div#gform_page_1_" + current_page).find(".gform_next_button").focus();
+		  });
+				
 
 	});
 	

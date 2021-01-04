@@ -6836,7 +6836,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
-	width: 10px !important;
+	width: 100px !important;
 	max-width: 100px !important;
 	}
 }
@@ -6885,11 +6885,14 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox{
 }
 
 @media (min-width: 768px){
-	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox{
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio{
 		display: flex;
 		gap: 2rem;
+		flex-wrap: wrap;
 	}
-	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li{
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li,
+	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li{
 		display: flex;
 		align-items: center;
 	}
@@ -7001,6 +7004,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 	top: 50%;
 	right: 16px;
 	transform: translateY(-50%);
+	overflow-y: auto;
+    max-height: 73vh;
 }
 @media (min-width: 576px){
 	.gform-step-dots-wrapper{
