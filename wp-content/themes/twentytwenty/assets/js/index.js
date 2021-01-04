@@ -883,6 +883,11 @@ window.addEventListener('load', function(){
 	// create form dots indicator wrapper
 	let formDotsWrapper = document.createElement('div');
 	formDotsWrapper.classList.add('gform-step-dots-wrapper');
+
+	if(formDotsWrapper.offsetHeight  > window.innerHeight){
+		formDotsWrapper.style.overflowY = 'scroll';
+		formDotsWrapper.style.height = '80vh';
+	}
 	popup.appendChild(formDotsWrapper);
 
 	// CREATE PROGRESS BAR

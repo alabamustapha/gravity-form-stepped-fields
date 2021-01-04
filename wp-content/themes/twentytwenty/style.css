@@ -6788,6 +6788,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[ty
 	font-size: 20px !important;
 	padding-bottom: 0 !important;
 	border: 1px solid #232523 !important;
+	margin-top: 0 !important;
 }
 body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	border: none !important;
