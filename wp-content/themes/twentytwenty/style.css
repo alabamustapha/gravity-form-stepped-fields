@@ -6491,13 +6491,14 @@ a.to-the-top > * {
 	padding: 60px 16px;
 	backdrop-filter: blur(5px);
 	font-family: 'Montserrat', sans-serif;
+	/* overflow-y: auto; */
 }
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	.gform-popup{
 		padding: 60px 24px;
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	.gform-popup{
 		padding: 60px;
 	}
@@ -6509,9 +6510,7 @@ a.to-the-top > * {
 }
 
 .gform-close-btn{
-	position: fixed;
-	bottom: 16px;
-	left: 16px;
+
 	color:  #00274E;
 	font-weight: 600;
 	font-size: 14px;
@@ -6523,15 +6522,18 @@ a.to-the-top > * {
 	border: 3px solid  #00274E;
 	}
 
-/* @media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	.gform-close-btn{
 		font-size: 20px;
-		bottom: 40px;
-		left: 16px;
+		/* bottom: 40px; */
+		/* left: 16px; */
 	}
-} */
-@media (min-width: 768px){
+}
+@media (min-width: 1200px){
 	.gform-close-btn{
+		position: fixed;
+		bottom: 16px;
+		left: 16px;
 		font-size: 18px;
 		bottom: 50px;
 		left: 60px;
@@ -6570,13 +6572,13 @@ body .gform_wrapper .gform_heading .gform_title {
 	line-height: 1.5;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_heading .gform_title {
 		width: 100%;
-		font-size: 24px;
+		/* font-size: 24px; */
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	body .gform_wrapper .gform_heading .gform_title {
 		font-size: 28px ;
 	}
@@ -6590,18 +6592,18 @@ body .gform_wrapper .gform_heading .gform_title {
 
 /* GFORM-FOOTER */
 body .gform_wrapper .gform_page_footer {
-	position: fixed;
-    bottom: 50px;
+	/* position: fixed;
+    bottom: 50px; */
     display: flex;
 	width: 80%;
 	border-top: 0;
 }
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_page_footer{
-		
+		margin-top: 0 !important;
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	body .gform_wrapper .gform_page_footer{
 		position: fixed;
 		bottom: 20px;
@@ -6639,16 +6641,17 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button,
 
 
 
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
 	body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button,
 	.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
-		padding: 8px 20px !important;
-		margin-right: 0 !important;
-		margin-bottom: 8px !important;
+		padding: 8px 16px !important;
+		/* margin-right: 0 !important; */
+		/* margin-bottom: 8px !important; */
+		font-size: 16px;
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
 	body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button,
 	.gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
@@ -6679,17 +6682,18 @@ body .gform_wrapper .gform_body a{
 	color: #FC9003;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape) and (orientation: landscape){
 	body .gform_wrapper .gform_body{
-		padding: 60px 24px;
+		padding: 10px 0;
 		
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	body .gform_wrapper .gform_body{
 		width: 70%;
 		margin: 0 auto;
 		margin-top: 80px;
+		padding: 60px 24px; 
 	}
 }
 
@@ -6715,7 +6719,7 @@ body .gform_wrapper .validation_error{
 	font-size: 16px !important;
 }
 
-@media (min-width: 576px){
+@media (min-width: 1200px){
 	body .gform_wrapper .validation_error{
 		margin: 0 auto;	
 
@@ -6738,15 +6742,15 @@ body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label
 	font-weight: 700;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
-		margin-bottom: 30px;
-		font-size: 34px;
+		/* font-size: 34px; */
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	body .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
 		font-size: 40px;
+		margin-bottom: 10px;
 	}
 }
 /* INPUT */
@@ -6763,7 +6767,15 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	color:  #333333;
 }
 
-@media (min-width: 576px){
+/* @media (min-width: 576px) and (orientation: landscape){
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
+	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
+		font-size: 32px !important;
+		padding-bottom: 10px !important;
+	}
+} */
+@media (min-width: 1200px){
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
 	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
@@ -6771,14 +6783,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 		padding-bottom: 10px !important;
 	}
 }
-/* @media (min-width: 768px){
-	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input,
-	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
-	body .gform_wrapper .gform_body .gform_fields .gfield_error input{
-		font-size: 40px !important;
-		padding-bottom: 20px !important;
-	}
-} */
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=file]{
 	font-size: 24px !important;
 	width: 100%;
@@ -6788,7 +6792,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[ty
 	font-size: 20px !important;
 	padding-bottom: 0 !important;
 	border: 1px solid #232523 !important;
-	margin-top: 0 !important;
+	margin-top: -3px !important;
 }
 body .gform_wrapper .gform_body .gform_fields .gfield_error input{
 	border: none !important;
@@ -6804,13 +6808,13 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
 	/* padding-bottom: 3rem; */
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input::placeholder,
 	body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
-		font-size: 32px !important;
+		/* font-size: 30px !important; */
 	}
 }
-/* @media (min-width: 768px){
+/* @media (min-width: 1200px){
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input::placeholder,
 	body .gform_wrapper .gform_body .gform_fields .gfield_error input::placeholder{
 		font-size: 40px !important;
@@ -6830,7 +6834,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm{
 	width: 50px !important;
 	max-width: 50px !important;
 }
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year,
@@ -6852,7 +6856,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select{
 	margin: 0 auto !important;
 	
 }
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day input,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month input,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year input,
@@ -6881,11 +6885,16 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute{
 /* RADIO AND CHECKBOXES */
 
 /* checkbox container */
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox{
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio{
 	display: block;
 }
+/* body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input,
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li input{
+	margin-top: -3px !important;
+} */
 
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio{
 		display: flex;
@@ -6896,6 +6905,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox{
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li{
 		display: flex;
 		align-items: center;
+		
 	}
 }
 
@@ -6905,15 +6915,16 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
 	font-weight: 500;
 	color: #232523;
 	margin-left: 20px;
+	line-height: 1;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
-		font-size: 28px;
+		/* font-size: 28px; */
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label,
 	body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label{
 		font-size: 36px;
@@ -6924,9 +6935,9 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[ty
 	font-size: 20px;
 	color: #00274E;
 }
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[type=checkbox] ~ label{
-		font-size: 24px;
+		/* font-size: 24px; */
 	}
 }
 
@@ -6941,7 +6952,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container input[ty
 /* body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct{
 	
 } */
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct{
 		display: flex;
 		align-items: flex-end;
@@ -6955,7 +6966,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 	display: inline-block !important;
 }
 
-/* @media (min-width: 768px){
+/* @media (min-width: 1200px){
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price_label,
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price,
 	body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity_label{
@@ -6984,13 +6995,13 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 	font-weight: 600;
 	color: #00274E;
 }
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	.gform-step-counter{
 		right: 16px;
-		font-size: 24px;
+		/* font-size: 24px; */
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	.gform-step-counter{
 		right: 60px;
 		font-size: 36px;
@@ -7008,12 +7019,12 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 	overflow-y: auto;
     max-height: 73vh;
 }
-@media (min-width: 576px){
+@media (min-width: 576px) and (orientation: landscape){
 	.gform-step-dots-wrapper{
 		right: 16px;
 	}
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 	.gform-step-dots-wrapper{
 		right: 60px;
 	}

@@ -863,8 +863,9 @@ window.addEventListener('load', function(){
 	let errorContainer = document.querySelector('.validation_error');
 	let formBody = document.querySelector('body .gform_wrapper .gform_body');
 	formBody.style.height = '40vh';
-	
-	formBody.style.marginTop = (errorContainer !== null) ? '0' : '100px';
+	if(window.offsetWidth > 992){
+		formBody.style.marginTop = (errorContainer !== null) ? '0' : '100px';
+	}
 	
 	
 	// CREATING STEPS AND PROGRESS BAR AND APPENDING TO POPUP
@@ -897,6 +898,7 @@ window.addEventListener('load', function(){
 	popup.appendChild(progressBar);
 
 	// create the form dots based on length of the steps and append to formDotsWrapper
+	
 	formPages.forEach(function(el, index){
 		let dot = document.createElement('span');
 		dot.classList.add('gform-step-dot');
@@ -919,7 +921,8 @@ window.addEventListener('load', function(){
 	addActiveClassToDots(formPageIndex);
 
 	function processNextStep(currentPage){
-	
+		
+		console.log(currentPage);
 		stepsCounter.textContent = `${currentPage}/${formPagesLength}`;
 		progressBar.style.width = `${(currentPage/formPagesLength) * 100}%`;
 
@@ -931,7 +934,7 @@ window.addEventListener('load', function(){
 
 	}
 	
-	processNextStep(formPageIndex);
+	// processNextStep(formPageIndex);
 
 	function complexFormscroll(currentPage){
 		let scrollEl = currentPage
@@ -943,9 +946,13 @@ window.addEventListener('load', function(){
 
 
 
-	function adaptiveFocusDate(){
+	function adaptiveFocusDate(index){
+		// console.log('new form');
 		// Get input fields containers and spread them to arrays instead of nodeLists
-		let dateInputs = [...document.querySelector('.clear-multi').children];
+		let dateInputs = jQuery('.clear-multi')[index];
+		// console.log(dateInputs);
+		dateInputs = [...dateInputs.children];	
+		// console.log(dateInputs);
 		dateInputs.forEach(function(field, index){
 			// select input fields inside of the containers
 		
@@ -963,13 +970,15 @@ window.addEventListener('load', function(){
 		})
 	}
 
+	adaptiveFocusDate(0);
 	jQuery(document).on('gform_page_loaded', function(event, form_id, current_page){
-	
+		// console.log(current_page + ' ..... ' + formPageIndex);
 
 		// FOCUS ON DATE FIELDS AFTER EACH IS COMPLETED AND IF THERE IS A DATE FIELD
-		adaptiveFocusDate();
-
+		adaptiveFocusDate(current_page - 1);
+		console.log(current_page);
 		processNextStep(current_page);
+
 		formPageIndex = (current_page > formPageIndex) ? current_page : formPageIndex;
 
 		// ADD SCROLLING TO COMPLEX FORM
@@ -977,7 +986,7 @@ window.addEventListener('load', function(){
 
 		// ADD ANIMATTION TO PAGE
 		if(current_page >= formPageIndex){
-			console.log(formPages[current_page - 1 ]);
+			
 			formPages[current_page - 1 ].classList.add('gform_enter');
 
 			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", 200)
@@ -1013,6 +1022,7 @@ window.addEventListener('load', function(){
 		});
 	})
 
+	
 
 
 
