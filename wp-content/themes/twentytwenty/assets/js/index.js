@@ -863,9 +863,8 @@ window.addEventListener('load', function(){
 	let errorContainer = document.querySelector('.validation_error');
 	let formBody = document.querySelector('body .gform_wrapper .gform_body');
 	formBody.style.height = '40vh';
-	if(window.offsetWidth > 992){
-		formBody.style.marginTop = (errorContainer !== null) ? '0' : '100px';
-	}
+	
+	formBody.style.marginTop = (errorContainer !== null) ? '0' : '100px';
 	
 	
 	// CREATING STEPS AND PROGRESS BAR AND APPENDING TO POPUP
@@ -884,11 +883,6 @@ window.addEventListener('load', function(){
 	// create form dots indicator wrapper
 	let formDotsWrapper = document.createElement('div');
 	formDotsWrapper.classList.add('gform-step-dots-wrapper');
-
-	if(formDotsWrapper.offsetHeight  > window.innerHeight){
-		formDotsWrapper.style.overflowY = 'scroll';
-		formDotsWrapper.style.height = '80vh';
-	}
 	popup.appendChild(formDotsWrapper);
 
 	// CREATE PROGRESS BAR
@@ -898,7 +892,6 @@ window.addEventListener('load', function(){
 	popup.appendChild(progressBar);
 
 	// create the form dots based on length of the steps and append to formDotsWrapper
-	
 	formPages.forEach(function(el, index){
 		let dot = document.createElement('span');
 		dot.classList.add('gform-step-dot');
@@ -920,9 +913,9 @@ window.addEventListener('load', function(){
 	}
 	addActiveClassToDots(formPageIndex);
 
+
 	function processNextStep(currentPage){
-		
-		console.log(currentPage);
+	
 		stepsCounter.textContent = `${currentPage}/${formPagesLength}`;
 		progressBar.style.width = `${(currentPage/formPagesLength) * 100}%`;
 
@@ -934,7 +927,7 @@ window.addEventListener('load', function(){
 
 	}
 	
-	// processNextStep(formPageIndex);
+	processNextStep(formPageIndex);
 
 	function complexFormscroll(currentPage){
 		let scrollEl = currentPage
@@ -945,40 +938,63 @@ window.addEventListener('load', function(){
 	}
 
 
+	
+	jQuery('.gform_page').each(function(index){
+		let dateInputContainer = this.querySelector('.clear-multi');
+		if(dateInputContainer !== null){
+			dateInputContainer.setAttribute('data-date-container', index);
+			// console.log(dateInputContainer);
+		}
+	})
 
-	function adaptiveFocusDate(index){
-		// console.log('new form');
-		// Get input fields containers and spread them to arrays instead of nodeLists
-		let dateInputs = jQuery('.clear-multi')[index];
-		// console.log(dateInputs);
-		dateInputs = [...dateInputs.children];	
-		// console.log(dateInputs);
-		dateInputs.forEach(function(field, index){
-			// select input fields inside of the containers
+	function adaptiveFocusDate(pageIndex){
 		
-			let input = field.querySelector('input');
-			input.addEventListener('keyup', function(){
-				let valueCount = 2;
-				if(this.parentNode.classList.contains('gfield_date_year')){
-					valueCount = 4;
-				}
-				if(this.value.length == valueCount){
-					// swap to next input field and focus on it
-					dateInputs[index + 1].querySelector('input').focus();
-				}
+		console.log(pageIndex);
+	
+		let dateInputs = jQuery('.clear-multi').filter(function(index){
+			return this.dataset.dateContainer == pageIndex;
+		});
+		dateInputs = dateInputs[0]
+	
+		// console.log(dateInputs);
+		
+		if(dateInputs !== undefined){
+			dateInputs = [...dateInputs.children];	
+		
+			dateInputs.forEach(function(field, pageIndex){
+				// select input fields inside of the containers
+			
+				let input = field.querySelector('input');
+				input.addEventListener('keyup', function(){
+					let valueCount = 2;
+					if(this.parentNode.classList.contains('gfield_date_year')){
+						valueCount = 4;
+					}
+					if(this.value.length == valueCount){
+						// swap to next input field and focus on it
+						dateInputs[pageIndex + 1].querySelector('input').focus();
+					}
+				})
 			})
-		})
+		}
 	}
 
 	adaptiveFocusDate(0);
 	jQuery(document).on('gform_page_loaded', function(event, form_id, current_page){
-		// console.log(current_page + ' ..... ' + formPageIndex);
 
+		// ASSIGN ID'S TO EACH DATEFIELD CONTAINERS
+		jQuery('.gform_page').each(function(index){
+			let dateInputContainer = this.querySelector('.clear-multi');
+			if(dateInputContainer !== null){
+				dateInputContainer.setAttribute('data-date-container', index);
+				// console.log(dateInputContainer);
+			}
+		})
+	
 		// FOCUS ON DATE FIELDS AFTER EACH IS COMPLETED AND IF THERE IS A DATE FIELD
 		adaptiveFocusDate(current_page - 1);
-		console.log(current_page);
+		
 		processNextStep(current_page);
-
 		formPageIndex = (current_page > formPageIndex) ? current_page : formPageIndex;
 
 		// ADD SCROLLING TO COMPLEX FORM
@@ -986,7 +1002,7 @@ window.addEventListener('load', function(){
 
 		// ADD ANIMATTION TO PAGE
 		if(current_page >= formPageIndex){
-			
+			// console.log(formPages[current_page - 1 ]);
 			formPages[current_page - 1 ].classList.add('gform_enter');
 
 			jQuery('#gform_page_1_' + current_page + ' .gform_page_fields').css("margin-top", 200)
@@ -1022,7 +1038,6 @@ window.addEventListener('load', function(){
 		});
 	})
 
-	
 
 
 
@@ -1036,6 +1051,5 @@ window.addEventListener('load', function(){
 	
 
 })  ; 
-
 
 
